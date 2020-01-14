@@ -1,16 +1,13 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { render } from '@testing-library/angular';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      imports: [RouterTestingModule],
+      declarations: [AppComponent]
     }).compileComponents();
   }));
 
@@ -30,6 +27,13 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ng8-testing-library app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain(
+      'ng8-testing-library app is running!'
+    );
+  });
+
+  it('should render title', async () => {
+    const component = await render(AppComponent);
+    component.getByText('Here are some links to help you start:');
   });
 });
