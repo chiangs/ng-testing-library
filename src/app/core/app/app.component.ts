@@ -37,11 +37,17 @@ import { Component } from '@angular/core';
         </h2>
       </li>
     </ul>
-    <app-button></app-button>
+    <app-button
+      [buttonLabel]="label"
+      (clickHandler)="onButtonClick()"
+    ></app-button>
     <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'ng8-testing-library';
+  label = 'label';
+
+  onButtonClick = () => console.log('clicked');
 }
