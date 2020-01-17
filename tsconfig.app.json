@@ -13,5 +13,8 @@
   ],
   "angularCompilerOptions": {
     "enableIvy": true
-  }
+  },
+  "exclude": [
+    "**/*.stories.ts"
+  ]
 }
