@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-child',
   template: `
-    <p>This is: {{ label }}</p>
+    <p data-testid="component-child">This is: {{ label }}</p>
   `,
   styleUrls: ['./child.component.css']
 })

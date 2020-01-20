@@ -1,25 +1,12 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ChildComponent } from './child.component';
+import { render } from '@testing-library/angular';
 
-describe('ChildComponent', () => {
-  let component: ChildComponent;
-  let fixture: ComponentFixture<ChildComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ChildComponent ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ChildComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+it('renders the component', async () => {
+  const component = await render(ChildComponent, {
+    componentProperties: {
+      label: 'New label'
+    }
   });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  const childID = component.getByTestId('component-child');
+  const child = component.getByText('This is: New label');
 });

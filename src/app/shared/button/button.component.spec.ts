@@ -5,7 +5,7 @@ it('renders the button and emits a click when clicked', async () => {
   const clickSpy = jasmine.createSpy('click');
   const component = await render(ButtonComponent, {
     componentProperties: {
-      label: 'Test Button Label',
+      buttonLabel: 'Test Button Label',
       clickHandler: {
         emit: clickSpy
       } as any
