@@ -6,7 +6,7 @@ Jest configuration via schematics from: [Jest-Schematic](https://github.com/brie
 
 Integrated Testing-Library for Angular: [Testing-Library](https://testing-library.com/)
 
-# Storybook
+## Storybook
 
 Installed using `npx -p @storybook/cli sb init`
 
@@ -24,7 +24,9 @@ Entity: `ng add @ngrx/entity`
 
 Setup of FeatureModules: `ng g m featureModuleName/featureModuleName-store --flat false --module root-store/root-store.module.ts`
 
+## Immer
 
+Installed immer and bumped up TS version to 3.7 to simplify the reducer.
 
 ## Development server
 
