@@ -6,6 +6,26 @@ Jest configuration via schematics from: [Jest-Schematic](https://github.com/brie
 
 Integrated Testing-Library for Angular: [Testing-Library](https://testing-library.com/)
 
+# Storybook
+
+Installed using `npx -p @storybook/cli sb init`
+
+## NgRx
+
+`RootStore` approach that has `FeatureModuleStore`s. [reference](https://wesleygrimes.com/angular/2018/05/30/ngrx-best-practices-for-enterprise-angular-applications.html)
+
+Store: `ng add @ngrx/store`
+
+Store Devtools: `ng add @ngrx/store-devtools`
+
+Effects: `ng add @ngrx/effects`
+
+Entity: `ng add @ngrx/entity`
+
+Setup of FeatureModules: `ng g m featureModuleName/featureModuleName-store --flat false --module root-store/root-store.module.ts`
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
