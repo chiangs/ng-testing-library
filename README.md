@@ -28,6 +28,14 @@ Setup of FeatureModules: `ng g m featureModuleName/featureModuleName-store --fla
 
 Installed immer and bumped up TS version to 3.7 to simplify the reducer.
 
+## CLI Budgets
+
+Updated bundle budgets, installed webpack build analyzer. `npm i -D webpack-bundle-analyzer`
+
+Run `ng build --prod --stats-json`, then `npx webpack-bundle-analyzer .\dist\ng8-testing-library\stats-es2015.json`.
+
+[Reference:](https://medium.com/dailyjs/how-did-angular-cli-budgets-save-my-day-and-how-they-can-save-yours-300d534aae7a)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
