@@ -1,0 +1,7 @@
+p {
+  position: relative;
+}
+
+p > span {
+  position: absolute;
+}
