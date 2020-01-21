@@ -7,6 +7,6 @@ it('renders the component', async () => {
       label: 'New label'
     }
   });
-  const childID = component.getByTestId('component-child');
-  const child = component.getByText('This is: New label');
+  const child = component.getByTestId('component-child');
+  expect(child.textContent).toBe('This is: New label');
 });
